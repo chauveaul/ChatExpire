@@ -1,19 +1,29 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+"use strict";
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const { onRequest } = require("firebase-functions/v2/https");
+const { initializeApp } = require("firebase-admin/app");
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+const express = require("express");
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+const expressApp = express();
+expressApp.use(express.json());
+expressApp.use((req, res, next) => {
+  res.append("Access-Control-Allow-Origin", ["*"]);
+  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.append("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBxJlHA4Y5uC5_aJbzqIFlhG1rbikc2fPM",
+  authDomain: "chatexpire.firebaseapp.com",
+  projectId: "chatexpire",
+  storageBucket: "chatexpire.appspot.com",
+  messagingSenderId: "955509183528",
+  appId: "1:955509183528:web:f1ae208a9d4667c6de911d",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+exports.app = onRequest(expressApp);
