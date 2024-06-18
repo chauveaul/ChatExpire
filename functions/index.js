@@ -2,6 +2,7 @@
 
 const { onRequest } = require("firebase-functions/v2/https");
 const { initializeApp } = require("firebase-admin/app");
+const { getFirestore } = require("firebase-admin/firestore");
 
 const express = require("express");
 
@@ -24,6 +25,34 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore();
+
+exports.createLounge = onRequest(async (req, res) => {
+  let loungeNumber = String(Math.floor(Math.random() * 1000000) + 1).padStart(
+    6,
+    "0",
+  );
+  let loungeName = `lounge-${loungeNumber}`;
+  console.log(`Trying to create a lounge with name ${loungeName}`);
+
+  const loungesRef = db.collection("lounges");
+  let doc = await loungesRef.doc(loungeName).get();
+  while (doc.exists) {
+    loungeNumber = String(Math.floor(Math.random() * 1000000) + 1).padStart(
+      6,
+      "0",
+    );
+    loungeName = `lounge-${loungeNumber}`;
+    console.log(`Trying to create a lounge with name ${loungeName}`);
+    doc = await loungesRef.doc(loungeName).get();
+  }
+
+  await loungesRef.doc(loungeName).set({
+    exists: true,
+  });
+
+  res.status(200).send(`Lounge created with name ${loungeName}`);
+});
 
 exports.app = onRequest(expressApp);
