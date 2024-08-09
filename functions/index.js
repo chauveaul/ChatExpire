@@ -3,11 +3,13 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
+const cors = require("cors");
 
 const express = require("express");
 
 const expressApp = express();
 expressApp.use(express.json());
+expressApp.use(cors());
 expressApp.use((req, res, next) => {
   res.append("Access-Control-Allow-Origin", ["*"]);
   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
@@ -53,6 +55,20 @@ exports.createLounge = onRequest(async (req, res) => {
   });
 
   res.status(200).send(`Lounge created with name ${loungeName}`);
+});
+
+exports.joinLounge = onRequest({ cors: true }, async (req, res) => {
+  console.log(req.body);
+  const loungeName = req.body.loungeName;
+  console.log(`Trying to join lounge with name ${loungeName}`);
+  const loungesRef = db.collection("lounges");
+  let doc = await loungesRef.doc(loungeName).get();
+  if (doc.exists) {
+    //Fetch all messages logic in here and redirect to the chat page
+    res.status(200).send(`Joined lounge with name ${loungeName}`);
+  } else {
+    res.status(404).send(`Lounge with name ${loungeName} does not exist`);
+  }
 });
 
 exports.app = onRequest(expressApp);
