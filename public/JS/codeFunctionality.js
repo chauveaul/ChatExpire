@@ -1,6 +1,15 @@
 "use strict";
 
 const numbers = document.querySelectorAll(".lounge-num");
+const joinLounge = document.querySelector(".join-lounge");
+
+for (let i = 0; i < numbers.length; i++) {
+  numbers[i].addEventListener("keydown", function () {
+    if (event.key === "Enter") {
+      joinLounge.click();
+    }
+  });
+}
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("keydown", function (event) {
@@ -13,7 +22,7 @@ for (let i = 0; i < numbers.length; i++) {
       if (i === 5 && numbers[5].value === "") {
         numbers[i - 1].focus();
         numbers[i - 1].value = "";
-      }
+      // }
       numbers[i].value = "";
     } else {
       event.preventDefault();

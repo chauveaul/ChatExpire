@@ -17,6 +17,10 @@ expressApp.use((req, res, next) => {
   next();
 });
 
+expressApp.get("/lounge/:num", (req, res) => {
+  //Actually, probably redirect to an html page and in the page script there i put all the texts.
+});
+
 const firebaseConfig = {
   apiKey: "AIzaSyBxJlHA4Y5uC5_aJbzqIFlhG1rbikc2fPM",
   authDomain: "chatexpire.firebaseapp.com",
