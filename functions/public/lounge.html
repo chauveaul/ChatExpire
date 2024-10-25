@@ -6,11 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ChatExpire - Lounge</title>
 
-    <link rel="stylesheet" href="CSS/lounge.css" />
+    <link rel="stylesheet" href="../CSS/lounge.css" />
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+    <script>
+      const firebaseApp = firebase.initializeApp({
+        apiKey: "AIzaSyBxJlHA4Y5uC5_aJbzqIFlhG1rbikc2fPM",
+        authDomain: "chatexpire.firebaseapp.com",
+        projectId: "chatexpire",
+        storageBucket: "chatexpire.appspot.com",
+        messagingSenderId: "955509183528",
+        appId: "1:955509183528:web:f1ae208a9d4667c6de911d",
+      });
+      const db = firebaseApp.firestore();
+    </script>
   </head>
   <body>
     <nav class="flex nav">
-      <a href="index.html" class="nav-link h1-size">ChatExpire</a>
+      <a href="../../index.html" class="nav-link h1-size">ChatExpire</a>
       <div class="flex nav-div"></div>
     </nav>
 
@@ -37,6 +50,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="JS/lounge.js" defer></script>
+    <script type="module" src="../JS/lounge.js" defer></script>
   </body>
 </html>

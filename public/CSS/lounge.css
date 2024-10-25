@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #d9d9d9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.nav {
+  justify-content: space-between;
+  padding: 1.6rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.nav-div {
+  gap: 1.6rem;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.h1-size {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.h2-size {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+article {
+  width: 90vw;
+  margin: 0 auto;
+  border-top: 1px solid #616161;
+  position: relative;
+}
+
+.chatbox {
+  margin: 0 auto;
+  margin-top: 2.4rem;
+  border: 1px solid #616161;
+  border-radius: 20px;
+  width: 70vw;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.chatbox-footer {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  display: grid;
+  padding: 1.6rem;
+  grid-template-columns: 15fr 1fr;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.chatbox-input {
+  padding: 1.6rem;
+  font-size: 1.2rem;
+  height: 3.2rem;
+  border-radius: 20px;
+  border: 1px solid #616161;
+  background-color: #c9c9c9;
+}
+
+.chatbox-content {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow-y: scroll;
+  max-height: 75%;
+}
+
+.chatbox-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  border: 1px solid #616161;
+  background-color: #c9c9c9;
+}
+
+.send-icon: {
+  text-align: center;
+  justify-self: center;
+}
+
+.message {
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 1.6rem;
+  display: flex;
+}
+
+.left-message {
+  align-self: flex-start;
+  margin-left: 0.8rem;
+  background-color: #c0c0c0;
+  border-bottom-left-radius: 10px;
+}
+
+.right-message {
+  align-self: flex-end;
+  margin-right: 0.8rem;
+  background-color: #d3c3b5;
+  border-bottom-right-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 5px;
+}

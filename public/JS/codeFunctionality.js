@@ -22,7 +22,7 @@ for (let i = 0; i < numbers.length; i++) {
       if (i === 5 && numbers[5].value === "") {
         numbers[i - 1].focus();
         numbers[i - 1].value = "";
-      // }
+      }
       numbers[i].value = "";
     } else {
       event.preventDefault();
