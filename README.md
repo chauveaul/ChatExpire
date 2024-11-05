@@ -28,4 +28,4 @@ To join a lounge, you can write the lounge number in the input box in the main m
 The frontend was made with just HTML, CSS, and Vanilla JavaScript. This was then served to the client using Express.js
 
 ### Backend
-The backend was achieved using Firebase for the database and the server-side functions. The server-side functions were used mostly to communicate with the database. For the database, I used Firestore which proved really useful with its realtime database, which allowed me to read for database updates and load the messages accordingly.
+The backend was achieved using Firebase for the database and the server-side functions. The server-side functions were used mostly to communicate with the database. For the database, I used Firestore which proved really useful with its realtime database. Thanks to that, I was able to look for database updates and load the messages accordingly without needing sockets or anything of the likes.
