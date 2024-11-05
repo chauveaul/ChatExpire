@@ -14,5 +14,10 @@ To start using ChatExpire, you can simply head over to this [link](https://www.c
 ### Create a Lounge
 To create a lounge, you can click on the **Create Lounge** button situated in the main menu, and you will then get redirected to the chat page. Afterwards, you can just send the lounge number or the URL to a friend!
 
+<img width="360" alt="Screenshot 2024-11-05  PM" src="https://github.com/user-attachments/assets/c227dc95-43b8-4997-8ac4-20eea7f8b4b2">
+
+
 ### Join a Lounge
 To join a lounge, you can write the lounge number in the input box in the main menu and click **Join Lounge** to be redirected to the chat room. Alternatively you can also access the chat room through a link that follows this format `https://chatexpire.web.app/lounge/{number}`
+
+<img width="360" alt="Screenshot 2024-11-05 at 2 30 26 PM" src="https://github.com/user-attachments/assets/eb3f2334-288f-4981-9090-552ab2d07a78">
