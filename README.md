@@ -21,3 +21,11 @@ To create a lounge, you can click on the **Create Lounge** button situated in th
 To join a lounge, you can write the lounge number in the input box in the main menu and click **Join Lounge** to be redirected to the chat room. Alternatively you can also access the chat room through a link that follows this format `https://chatexpire.web.app/lounge/{number}`
 
 <img width="360" alt="Screenshot 2024-11-05 at 2 30 26 PM" src="https://github.com/user-attachments/assets/eb3f2334-288f-4981-9090-552ab2d07a78">
+
+## How it was made
+
+### Frontend
+The frontend was made with just HTML, CSS, and Vanilla JavaScript. This was then served to the client using Express.js
+
+### Backend
+The backend was achieved using Firebase for the database and the server-side functions. The server-side functions were used mostly to communicate with the database. For the database, I used Firestore which proved really useful with its realtime database, which allowed me to read for database updates and load the messages accordingly.
