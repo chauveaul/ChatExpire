@@ -4,12 +4,12 @@
  <p align="center"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Javascript/javascript3.svg"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Firebase/firebase1.svg"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Express/express1.svg"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/HTML/html1.svg"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/CSS/css1.svg"> <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/NodeJS/nodejs1.svg"></p>
 <hr>
 
-## How to use it
+## 🤔 How to use it
 
 To start using ChatExpire, you can simply head over to this [link](https://www.chatexpire.web.app).
 
 >[!NOTE]
->Make sure to stay on the same ip address for the duration of the conversation, otherwise the server will respond with a 404:Not Found
+>Make sure to stay on the same ip address for the duration of the conversation, otherwise the server will respond with a 404: Not Found
 
 ### Create a Lounge
 To create a lounge, you can click on the **Create Lounge** button situated in the main menu, and you will then get redirected to the chat page. Afterwards, you can just send the lounge number or the URL to a friend!
@@ -22,7 +22,7 @@ To join a lounge, you can write the lounge number in the input box in the main m
 
 <img width="360" alt="Screenshot 2024-11-05 at 2 30 26 PM" src="https://github.com/user-attachments/assets/eb3f2334-288f-4981-9090-552ab2d07a78">
 
-## How it was made
+## 🤨 How it was made
 
 ### Frontend
 The frontend was made with just HTML, CSS, and Vanilla JavaScript. This was then served to the client using Express.js
@@ -30,5 +30,5 @@ The frontend was made with just HTML, CSS, and Vanilla JavaScript. This was then
 ### Backend
 The backend was achieved using Firebase for the database and the server-side functions. The server-side functions were used mostly to communicate with the database. For the database, I used Firestore which proved really useful with its realtime database. Thanks to that, I was able to look for database updates and load the messages accordingly without needing sockets or anything of the likes.
 
-# License
+# ⚖️ License
 ChatExpire is licensed under the [MIT License](LICENSE)
